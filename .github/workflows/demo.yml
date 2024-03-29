@@ -40,6 +40,6 @@ jobs:
         with:
           name: dist
       - name: List dist Files
-        run: find dist/assets/*.js -type f -execdir echo '{}' ';'
+        run: ls dist
       - name: Deploy
         run: echo "Deploying..."
