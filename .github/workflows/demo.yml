@@ -29,7 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dist-files
+          name: dist
           path: dist
   deploy:
     needs: build
@@ -38,7 +38,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: dist-files
+          name: dist
       - name: List dist Files
         run: find dist/assets/*.js -type f -execdir echo '{}' ';'
       - name: Deploy
